@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande d'essaie</title>
+    <link href="formulaire.css" rel="stylesheet">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="images/lambo form.mp4" type="video/mp4">
+    </video>
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" class="logo" align="center">
+        </div>
+    <nav class="menu">
+            <a href="accueil.html">Accueil</a>
+            <a href="voiture.html">Voitures</a>
+            <a href="service.php">Services</a>
+            <a href="connexion.html?redirect=formulaire.html">Demande d'essai</a>
+            <a href="contact.html">Contactez-nous</a>
+    </nav>
+
+    <div class="auth-dropdown">
+        <button class="auth-btn" id="compte"><img src="images/utilisateur.png" alt="Compte" class="icon"></button>
+        <div class="auth-menu">
+            <a href="s'inscrire.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+        </div>
+        </div>
+    
+</div>
+
+    </header>
+    </div>
+
+    <center><div class="form-container">
+        <h2>Demande d'essai</h2>
+        
+        <form method = "POST" action="formulaire.php">
+            <label for="voiture">Marque de la voiture :</label>
+    <select id="voiture" name="voiture" onchange="updateModeles()">
+        <option value="">Choisissez une marque</option>
+        <option value="BMW">BMW</option>
+        <option value="PEUGEOT">PEUGEOT</option>
+        <option value="LAMBORGHINI">LAMBORGHINI</option>
+    </select>
+ 
+    <label for="modele">Modèle :</label>
+    <select id="modele" name="modele">
+        <option value="">-- Sélectionnez un modèle --</option>
+    </select>
+            
+            <label for="utilisateur">Nom de l'utilisateur :</label>
+            <input type="text" id="utilisateur" name="utilisateur" placeholder="Votre nom" required>
+            
+            <label for="date_demande">Date de la demande :</label>
+            <input type="date" id="date_demande" name="date_demande" required>
+
+            <label for="temps">Heure de la demande :</label>
+            <input type="time" id="temps" name="temps" required>
+            
+            <button type="submit" class="submit-btn">Confirmer</button>
+        </form>
+
+        <script>
+            const modelesParMarque = {
+                BMW: ["Z4 Cabriolet", "I5", "X6 M", "M4 CS"],
+                PEUGEOT: ["208GT", "508", "2008GT", "5008"],
+                LAMBORGHINI: ["Temerario", "Huracan", "Revuelto", "Urus"]
+            };
+         
+            function updateModeles() {
+                const marqueSelect = document.getElementById("voiture");
+                const modeleSelect = document.getElementById("modele");
+                const marque = marqueSelect.value;
+         
+                // Réinitialiser la liste des modèles
+                modeleSelect.innerHTML = '<option value="">-- Sélectionnez un modèle --</option>';
+         
+                if (modelesParMarque[marque]) {
+                    modelesParMarque[marque].forEach(function(modele) {
+                        const option = document.createElement("option");
+                        option.value = modele;
+                        option.text = modele;
+                        modeleSelect.appendChild(option);
+                    });
+                }
+            }
+        </script>
+    </div>
+</center>   
+</body>
+</html>

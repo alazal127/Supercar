@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Supercar</title>
+    <link rel="stylesheet" href="s'inscrire.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" class="logo" align="center">
+        </div>   
+            <nav class="menu">
+                <a href="accueil.html">Accueil</a>
+                <a href="voiture.html">Voitures</a>
+                <a href="service.php">Services</a>
+                <a href="connexion.html?redirect=formulaire.html">Demande d'essai</a>
+                <a href="contact.html">Contactez-nous</a>
+           
+           
+            </nav>
+        <div><nav>     
+            <div class="auth-dropdown">
+            <button class="auth-btn" id="compte"><img src="images/utilisateur.png" alt="Compte" class="icon"></button>
+            <div class="auth-menu">
+                <a href="s'inscrire.html">S'inscrire</a>
+                <a href="connexion.html">Se connecter</a>
+            </div>
+            </div>
+        </nav></div>
+    </div>
+             
+             
+    
+        </header>
+
+    <center><div class="container">
+        <h2>Créer un compte</h2>
+        <form action="s'inscrire.php" method="POST">
+            <div class="input-group">
+                <label for="fullname">Nom et prénom</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" id="mdp" name="mdp" required>
+            </div>
+            <div class="input-group">
+                <label for="conf_mdp">Confirmer le mot de passe</label>
+                <input type="password" id="conf_mdp" name="conf_mdp" required>
+            </div>
+            <button type="submit">S'inscrire</button>
+            <p>Déjà un compte ? <a href="connexion.html">Connectez-vous</a></p>
+        </form>
+    </div></center>
+</body>
+</html>

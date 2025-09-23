@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title> 
+    <link href="contact.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" class="logo" align="center">
+        </div>      
+        <nav class="menu">
+            <a href="accueil.html">Accueil</a>
+            <a href="voiture.html">Voitures</a>
+            <a href="connexion.html?redirect=formulaire.html">Demande d'essai</a>
+            <a href="service.php">Services</a>
+            <a href="contact.html">Contactez-nous</a>
+       
+       
+        </nav>
+    <div><nav>     
+        <div class="auth-dropdown">
+        <button class="auth-btn" id="compte"><img src="images/utilisateur.png" alt="Compte" class="icon"></button>
+        <div class="auth-menu">
+            <a href="s'inscrire.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+        </div>
+        </div>
+    </nav></div>
+</div>
+         
+         
+
+    </header>
+</div>    
+<div class="allcontent">    
+    <div class="contact-container">
+        <h2>Contactez-nous</h2>
+        <form method="POST" action="contact.php">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type = "submit" value = "enregistrer" class="button" id="submit">
+        </form>
+    </div>
+    
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14972.83157917152!2d57.46482523536339!3d-20.250210987789526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b568ad43817%3A0x8a05e99b34da1e53!2sGet%20Going%20Holidays%20(Car%20Rental%20Office)!5e0!3m2!1sfr!2smu!4v1744865108329!5m2!1sfr!2smu" width="600" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-box"> <!-- ✅ Nouveau conteneur -->
+            <h1>Contactez nous directement :</h1>
+            <ul class="contact-info">
+            <li class="contact-item">📍 Adresse : SUPERCAR - Ebéne City </li>            
+            <li class="contact-item">📞 Téléphone : 548974</li>
+            <li class="contact-item">🕒 Horaire de travail : 8h-16h</li>
+            <li class="contact-item">📧 Email : contact@supercar.com</li>
+            </ul>
+          </div>
+</div>    
+</body>
+</html>
+

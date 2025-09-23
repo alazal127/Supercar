@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.car-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+}
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+.car-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.car-card p {
+    font-size: 16px;
+    color: #333;
+}
+.buttons {
+    margin-top: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background: #0056b3;
+}
+.logo{
+width:100px;
+height:auto;
+}
+nav{
+
+padding-top:0px;
+margin-right: 20px;
+display: flex;
+gap: 20px;
+
+}
+a{
+text-decoration: none;
+font-size: 18px;
+color:black;
+}
+img{
+width: 100%; 
+height:auto; 
+}
+
+/* Style du texte */
+.texte {
+font-size: 20px;
+color: white;
+}
+/* === Effet Hover Menu === */
+.menu a {
+position: relative;
+color: #333;
+font-weight: bold;
+transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+padding: 6px 12px;
+border-radius: 6px;
+}
+
+.menu a:hover {
+color: gray;
+transform: scale(1.05);
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header {
+display: flex;
+justify-content: space-between; /* Espace entre le logo et le menu */
+align-items: center; /* Aligne verticalement les éléments */
+padding: 0px 20px; /* Espacement intérieur */
+background-color: #f8f8f8; /* Couleur de fond */
+}
+
+
+.menu ul {
+list-style: none; /* Supprime les puces des listes */
+display: flex; /* Affiche les éléments en ligne */
+margin: 0;
+padding: 0;
+}
+
+.menu li {
+margin-left: 0px; /* Espacement entre les éléments du menu */
+}
+
+.menu a {
+text-decoration: none; /* Supprime le soulignement des liens */
+color: #333; /* Couleur du texte */
+font-weight: bold; /* Texte en gras */
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+.auth-dropdown {
+position: relative;
+}
+
+.auth-btn {
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.auth-btn img {
+width: 25px;
+height: 25px;
+border-radius: 50%;
+transition: transform 0.2s;
+}
+
+.auth-btn:hover img {
+transform: scale(1.1);
+}
+
+.auth-menu {
+display: none;
+position: absolute;
+right: 0;
+background: rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(10px);
+padding: 8px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-dropdown:hover .auth-menu {
+display: block;
+}
+
+.auth-menu a {
+display: block;
+padding: 6px;
+color: black;
+text-decoration: none;
+font-size: 14px;
+}
+
+.auth-menu a:hover {
+background: transparent;
+}
+
+@media (max-width: 750px) {
+.menu-list {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 50px;
+right: 15px;
+background: rgba(0, 0, 0, 0.9);
+padding: 8px;
+border-radius: 8px;
+}
+
+.menu-list.active {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
+}
+.container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 2cm;
+max-width: 800px;
+margin: 20px auto;
+}
+.image-pleine-largeur {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+.car-card {
+
+background: white;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+overflow: hidden;
+
+width: 300px;
+
+text-align: center;
+
+padding: 15px;
+
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+position: relative;
+
+}
+
+/* Effet au survol */
+
+.car-card:hover {
+
+transform: translateY(-10px) scale(1.03);
+
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Animation subtile continue (optionnel) */
+
+@keyframes floatCard {
+
+0% { transform: translateY(0); }
+
+50% { transform: translateY(-5px); }
+
+100% { transform: translateY(0); }
+
+}
+
+/* Appliquer l'effet de flottement uniquement au hover */
+
+.car-card:hover {
+
+animation: floatCard 2s ease-in-out infinite;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #0D0D0D, #B30000, #F2F2F2, #CCCCCC);
+    background-size: 400% 400%;
+    animation: gradientAnim 15s ease infinite;
+  }
+  @keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+.details-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+ 
+.details-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+ 
+.details-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+ 
+.details-box p {
+    font-size: 16px;
+    color: #333;
+}
+ 
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+ 
+.close-btn:hover {
+    color: #000;
+}
+ 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}

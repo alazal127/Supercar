@@ -1,0 +1,36 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "form map"
+                "form details";
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
+            
+        }
+        .frame {
+            background-color: #fff;
+            border: 2px solid #000;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form {
+            grid-area: form;
+        }
+        .map {
+            grid-area: map;
+        }
+        .details {
+            grid-area: details;
+        }
+    

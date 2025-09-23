@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg,#504b50, #433c44 );
+    color: white;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2b2b2c;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #232324;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Header fixe avec fond transparent */
+header {
+    display: flex;
+    justify-content: space-between; /* Espace entre le logo et le menu */
+    align-items: center; /* Aligne verticalement les éléments */
+    padding: 0px 20px; /* Espacement intérieur */
+    background-color: #f8f8f8; /* Couleur de fond */
+}
+nav{
+   
+    padding-top:0px;
+    margin-right: 20px;
+    display: flex;
+    gap: 20px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color:black;
+}
+.logo img {
+    max-width: 100px; /* Ajustez la taille du logo */
+    height: auto; /* Maintient le ratio de l'image */
+}
+.menu ul {
+    list-style: none; /* Supprime les puces des listes */
+    display: flex; /* Affiche les éléments en ligne */
+    margin: 0;
+    padding: 0;
+}
+ 
+.menu li {
+    margin-left: 0px; /* Espacement entre les éléments du menu */
+}
+.menu a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+.auth-dropdown {
+    position: relative;
+}
+
+.auth-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-btn img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.auth-btn:hover img {
+    transform: scale(1.1);
+}
+
+.auth-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-dropdown:hover .auth-menu {
+    display: block;
+}
+
+.auth-menu a {
+    display: block;
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-menu a:hover {
+    background: transparent;
+}
+
+@media (max-width: 750px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+.menu a {
+    position: relative;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+ 
+.menu a:hover {
+    color: gray;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #1f4037, #99f2c8, #1c92d2, #f2fcfe);
+    background-size: 400% 400%;
+    animation: gradientAnim 15s ease infinite;
+  }
+  @keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
