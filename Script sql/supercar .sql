@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 01 oct. 2025 à 06:27
+-- Généré le : mar. 14 oct. 2025 à 07:30
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -26,15 +26,13 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `admin`
 --
-
-DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
   `mdp` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nom` (`nom`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `admin`
@@ -84,6 +82,7 @@ CREATE TABLE IF NOT EXISTS `demande_essaie` (
   `utilisateur` varchar(30) DEFAULT NULL,
   `date_demande` varchar(30) DEFAULT NULL,
   `temps` time DEFAULT NULL,
+  `etat` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`guestid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 
@@ -91,9 +90,9 @@ CREATE TABLE IF NOT EXISTS `demande_essaie` (
 -- Déchargement des données de la table `demande_essaie`
 --
 
-INSERT INTO `demande_essaie` (`guestid`, `voiture`, `modele`, `utilisateur`, `date_demande`, `temps`) VALUES
-(5, 'BMW', NULL, 'azal', '2025-03-20', NULL),
-(23, 'LAMBORGHINI', 'Urus', 'said', '2024-06-04', '12:48:00');
+INSERT INTO `demande_essaie` (`guestid`, `voiture`, `modele`, `utilisateur`, `date_demande`, `temps`, `etat`) VALUES
+(5, 'BMW', NULL, 'azal', '2025-03-20', NULL, 'Validé'),
+(23, 'LAMBORGHINI', 'Urus', 'said', '2024-06-04', '12:48:00', 'Validé');
 
 -- --------------------------------------------------------
 
