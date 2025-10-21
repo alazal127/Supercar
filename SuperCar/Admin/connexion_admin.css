@@ -1,0 +1,119 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fond animé */
+body {
+    background: linear-gradient(-45deg, #2c3e50, #3498db, #8e44ad, #2ecc71);
+    background-size: 400% 400%;
+    animation: gradientAnim 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+@keyframes gradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Conteneur principal */
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    width: 380px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Titre */
+.container h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #f9f9f9;
+    letter-spacing: 1px;
+}
+
+/* Champs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #eaeaea;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.02);
+}
+
+/* Bouton */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #3498db, #8e44ad);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Message erreur */
+.message-erreur {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff8080;
+    border: 1px solid #ff4d4d;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+}

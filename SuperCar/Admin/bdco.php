@@ -3,13 +3,13 @@
 //définir vos paramètres de connexion
 
 // nom du serveur
-$host="localhost";
+$host="mysql-attoumani.alwaysdata.net";
 // nom utilisateur
-$login="root";
+$login="attoumani";
 // mot de passe
-$pass="";
+$pass="128@azali";
 // nom de la base de données
-$dbname="supercar";
+$dbname="attoumani_supercar";
 
 
 // créer la connexion avec la base de données

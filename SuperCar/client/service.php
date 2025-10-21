@@ -30,7 +30,7 @@
 <?php
 include("bdco.php"); 
 
-$sql = "SELECT titre, amorce, caracteristique, image FROM Service";
+$sql = "SELECT titre, amorce, caracteristique, image FROM service";
 $curseur = mysqli_query($bdd, $sql);
 
 while ($row = mysqli_fetch_assoc($curseur)) {

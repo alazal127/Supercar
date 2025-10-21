@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin - Supercar</title>
+    <link rel="stylesheet" href="connexion_admin.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h2>Connexion Admin</h2>
+            <form action="connexion_admin.php" method="POST">
+                <div class="input-group">
+                    <label for="nom">Nom d'utilisateur</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="input-group">
+                    <label for="mdp">Mot de passe</label>
+                    <input type="password" id="mdp" name="mot_de_passe" required>
+                </div>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

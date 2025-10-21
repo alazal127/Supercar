@@ -1,9 +1,9 @@
 <?php
 // Connexion à la base de données
-$host = 'localhost';
-$dbname = 'supercar';
-$user = 'root';
-$pass = '';
+$host = 'mysql-attoumani.alwaysdata.net';
+$dbname = 'attoumani_supercar';
+$user = 'attoumani';
+$pass = '128@azali';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
@@ -40,6 +40,17 @@ $stmt = $pdo->query($sql);
         .btn-danger:hover { background-color: #c0392b; }
         .btn-add { margin-top: 10px; display: inline-block; }
         img { width: 100px; height: auto; }
+
+         .retour {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background: #555;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +91,6 @@ $stmt = $pdo->query($sql);
         </tr>
         <?php endwhile; ?>
     </table>
-
+<a href="admin.php" class="retour">⬅ Retour au tableau de bord</a>
 </body>
 </html>
